@@ -20,6 +20,7 @@ sudo apt-get install $MY_PROGRAMS $MY_SHELL
 
 echo -e "\n\e[32mInstalling \e[34moh-my-zsh\e[32m...\e[39m"
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+# After installing oh-my-zsh enter "exit" otherwise the installation won't continue!
 
 echo -e "\n\e[32mAppling zsh theme...\e[39m"
 find ~/.zshrc -type f -exec sed -i "s/robbyrussel/'$ZSH_THEME'/g" {} \;
