@@ -18,12 +18,16 @@ fi
 echo -e "\n\e[32mInstalling my standard programs...\e[39m"
 sudo apt-get install $MY_PROGRAMS $MY_SHELL
 
-echo -e "\n\e[32mInstalling oh-my-zsh...\e[39m"
+echo -e "\n\e[32mInstalling \e[34moh-my-zsh\e[32m...\e[39m"
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 echo -e "\n\e[32mAppling zsh theme...\e[39m"
 find ~/.zshrc -type f -exec sed -i "s/robbyrussel/'$ZSH_THEME'/g" {} \;
 
-echo -e "\n\e[32mInstalling Crystal...\e[39m"
+echo -e "\n\e[32mInstalling \e[34mCrystal\e[32m...\e[39m"
 curl https://dist.crystal-lang.org/apt/setup.sh | sudo $MY_SHELL
 sudo apt-get install crystal
+
+echo -e "\n\e[32mInstalling \e[34mVisual Studio Code\e[32m...\e[39m"
+wget -O ~/Downloads/vscode-amd64.deb https://go.microsoft.com/fwlink/?LinkID=760868
+sudo dpkg -i ~/Downloads/vscode-amd64.deb
